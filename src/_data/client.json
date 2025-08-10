@@ -1,0 +1,15 @@
+{
+  "name": "More Power Electric",
+  "email": "Morepowerelectricllc@gmail.com",
+  "phone": "810-459-6302",
+  "phoneFormatted": "(810) 459-6302",
+  "address": {
+    "lineOne": "401 Elmwood Drive, Troy, MI, United States, Michigan",
+    "lineTwo": "Second Address Line, If Needed",
+    "city": "",
+    "county": "",
+    "postcode": "",
+    "mapLink": "https://maps.app.goo.gl/ZhePbTjskM2YksQh6"
+  },
+  "domain": "https://morepowerelectricllc.com/"
+}
