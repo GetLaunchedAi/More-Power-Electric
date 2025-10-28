@@ -18,7 +18,7 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="int-hero">
-  <h1 id="home-h">Our Projects</h1>
+  <h1 id="home-h" class="fx fade-in">Our Projects</h1>
   {% image './src/images/projectsbannerimg.png', 'electrical service projects', '',
   'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
 </section>
@@ -28,10 +28,10 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="gallery">
-  <div class="cs-container">
-    <div class="cs-image-group">
+  <div class="cs-container fx fade-in">
+    <div class="cs-image-group fx slide-top staggered-m" style="--i:1">
       <!-- Row 1-->
-      <div class="cs-row cs-row-1">
+      <div class="cs-row cs-row-1 fx slide-top staggered-m" style="--i:1">
         {% image './src/images/portfolio/port-1.jpg', 'standby generator
         installation', 'cs-picture cs-picture-1', 'lazy', '(max-width: 600px)
         200px, 400px'%} {% image './src/images/portfolio/port-4.jpg', 'commercial
@@ -41,7 +41,7 @@ eleventyNavigation:
         'cs-picture cs-picture-3', 'lazy', '(max-width: 600px) 200px, 400px'%}
       </div>
       <!-- Row 2 -->
-      <div class="cs-row cs-row-2">
+      <div class="cs-row cs-row-2 fx slide-top staggered-m" style="--i:2">
         {% image './src/images/portfolio/port-2.jpg', 'LED lighting conversion',
         'cs-picture cs-picture-1', 'lazy', '(max-width: 600px) 200px, 400px'%}
         {% image './src/images/portfolio/port-5.jpg', 'parking lot light repair',
@@ -50,7 +50,7 @@ eleventyNavigation:
         'cs-picture cs-picture-3', 'lazy', '(max-width: 600px) 200px, 400px'%}
       </div>
       <!-- Row 3 -->
-      <div class="cs-row cs-row-3">
+      <div class="cs-row cs-row-3 fx slide-top staggered-m" style="--i:3">
         {% image './src/images/portfolio/port-3.jpg', 'residential wiring
         project', 'cs-picture cs-picture-1', 'lazy', '(max-width: 600px) 200px,
         400px'%} {% image './src/images/portfolio/port-6.jpg', 'commercial
@@ -61,7 +61,7 @@ eleventyNavigation:
         200px, 400px'%}
       </div>
     </div>
-    <a href="/contact" class="button-solid">Get Free Quote</a>
+    <a href="/contact" class="button-solid fx slide-top staggered-m" style="--i:4">Get Free Quote</a>
   </div>
 </section>
 
@@ -70,7 +70,7 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section id="cta">
-  <div class="container">
+  <div class="container fx fade-in">
     <h2 class="title">
       Power Up <br />
       With Us Today
