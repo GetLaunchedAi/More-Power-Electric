@@ -136,6 +136,357 @@
     margin-top: 2rem;
   }
 }
+/*-- -------------------------- -->
+<---        Why Choose          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #why-choose {
+    padding: var(--sectionPadding);
+  }
+  #why-choose .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #why-choose .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, remove to left align */
+    align-items: center;
+  }
+  #why-choose .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+    text-transform: uppercase;
+  }
+  #why-choose .cs-title:after {
+    /* Blue underline */
+    content: "";
+    width: 4rem;
+    height: 4px;
+    background: #004aad;
+    display: block;
+    margin: 0.5rem auto 0;
+  }
+  #why-choose .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #why-choose .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #why-choose .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 31.25rem;
+    /* 24px - 32px */
+    padding: clamp(1.5rem, 3vw, 2rem);
+    background-color: #f7f9fc;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  #why-choose .cs-item:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  }
+  #why-choose .cs-icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #f0f4f8;
+    border-radius: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  #why-choose .cs-icon {
+    width: 1.5rem;
+    height: auto;
+    display: block;
+  }
+  #why-choose .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+    text-transform: uppercase;
+  }
+  #why-choose .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #why-choose .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #why-choose .cs-item {
+    width: 48%;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #why-choose .cs-card-group {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  #why-choose .cs-item {
+    width: 33.33%;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #why-choose .cs-title,
+  body.dark-mode #why-choose .cs-text,
+  body.dark-mode #why-choose .cs-h3,
+  body.dark-mode #why-choose .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #why-choose .cs-item {
+    background-color: var(--accent);
+  }
+  body.dark-mode #why-choose .cs-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/*-- -------------------------- -->
+<---      Emergency Banner      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #emergency-banner {
+    padding: 3rem 1rem;
+    background-color: #004aad;
+    color: #fff;
+  }
+  #emergency-banner .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+  #emergency-banner .cs-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #emergency-banner .cs-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+  }
+  #emergency-banner .cs-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+  }
+  #emergency-banner .cs-title {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 900;
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    line-height: 1.2em;
+  }
+  #emergency-banner .cs-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: #fff;
+  }
+  #emergency-banner .cs-link {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+  #emergency-banner .cs-button-solid {
+    font-size: 1rem;
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #004aad;
+    background-color: #f7f9fc;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+    gap: 0.5rem;
+  }
+  #emergency-banner .cs-button-solid:hover {
+    background-color: #fff;
+  }
+  #emergency-banner .cs-arrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: inherit;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #emergency-banner .cs-container {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 3rem;
+  }
+  #emergency-banner .cs-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  #emergency-banner .cs-text-group {
+    text-align: left;
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+  #emergency-banner {
+    padding: 2rem 1rem;
+  }
+  #emergency-banner .cs-container {
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  #emergency-banner .cs-content {
+    gap: 2rem;
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #emergency-banner {
+    background-color: var(--medium);
+  }
+  body.dark-mode #emergency-banner .cs-button-solid {
+    background-color: var(--primary);
+    color: #000;
+  }
+  body.dark-mode #emergency-banner .cs-button-solid:hover {
+    background-color: #fff;
+  }
+  body.dark-mode #emergency-banner .cs-arrow {
+    color: #000;
+  }
+}
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #services {
+    padding: var(--sectionPadding);
+    text-align: center;
+  }
+  #services .card {
+    list-style: none;
+    margin-bottom: 3rem;
+  }
+  #services .card:last-of-type {
+    margin-bottom: 0;
+  }
+  #services picture {
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: #ff9900;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+  }
+  #services picture img {
+    width: 2.5rem;
+    height: auto;
+  }
+  #services h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--headerColor);
+  }
+  #services p {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #services {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  #services .card {
+    margin-bottom: 0;
+    flex: 1;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #services h2,
+  body.dark-mode #services p {
+    color: var(--bodyTextColorWhite);
+  }
+}
+
 /* Desktop - 1024px */
 @media only screen and (min-width: 64em) {
   #sbs .cs-container {

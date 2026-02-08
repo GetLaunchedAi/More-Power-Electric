@@ -26,27 +26,27 @@ hamburgerMenu.addEventListener('click', function () {
 });
 
 serviceMenu.addEventListener('click', function () {
+    if (window.innerWidth >= 1024) return; // Don't handle click on desktop
+    
     const isServiceOpen = serviceMenu.classList.contains("open");
     if (!isServiceOpen) {
         serviceMenu.setAttribute("aria-expanded", true);
         serviceMenu.classList.add("open");
-        if (screenWidth < 770) {
-            about.style.display = 'none'
-            contact.style.display = 'none'
-            projects.style.display = 'none'
+        
+        // Only adjust other menu items if we're on mobile
+        if (window.innerWidth < 1024) {
+            if (about) about.style.display = 'none';
+            if (contact) contact.style.display = 'none';
+            if (projects) projects.style.display = 'none';
         }
-
-
     } else {
         serviceMenu.setAttribute("aria-expanded", false);
         serviceMenu.classList.remove("open");
-        if (screenWidth < 770) {
-            about.style.display = 'block'
-            contact.style.display = 'block'
-            projects.style.display = 'block'
+        
+        if (window.innerWidth < 1024) {
+            if (about) about.style.display = 'block';
+            if (contact) contact.style.display = 'block';
+            if (projects) projects.style.display = 'block';
         }
-
-
-
     }
 });

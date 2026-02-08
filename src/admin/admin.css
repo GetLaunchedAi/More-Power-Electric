@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.admin {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+}
+
+.admin-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.admin-eyebrow {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: #64748b;
+    margin: 0 0 0.5rem 0;
+}
+
+.admin-header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+}
+
+.admin-subtitle {
+    margin: 0;
+    color: #475569;
+}
+
+.admin-link {
+    background-color: #0f172a;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.admin-alert {
+    padding: 0.85rem 1rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.admin-alert-error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.admin-alert-success {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.admin-card {
+    background-color: #fff;
+    border-radius: 1.25rem;
+    border: 1px solid #e2e8f0;
+    padding: 1.75rem;
+    box-shadow: 0px 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+.admin-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.admin-pill {
+    background-color: #e2e8f0;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+input,
+textarea {
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: #f8fafc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.admin-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-actions button {
+    border: none;
+    background-color: #ea580c;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.85rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-note {
+    margin: 0;
+    color: #64748b;
+}
+
+@media only screen and (max-width: 40em) {
+    .admin {
+        padding: 2.5rem 1rem 3rem;
+    }
+
+    .admin-card {
+        padding: 1.25rem;
+    }
+}
+

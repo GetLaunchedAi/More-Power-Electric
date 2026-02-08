@@ -1,0 +1,262 @@
+---
+layout: "base.html"
+---
+
+<!-- ============================================ -->
+<!--                 PRODUCT HERO                 -->
+<!-- ============================================ -->
+
+<section id="product-hero">
+    <div class="cs-container">
+        <nav class="cs-breadcrumbs">
+            <a href="/catalog/" class="cs-breadcrumb-link">Catalog</a>
+            <span class="cs-breadcrumb-divider">/</span>
+            <span class="cs-breadcrumb-current">{{ gen.name }}</span>
+        </nav>
+        <div class="cs-heading">
+            <div class="cs-title-group">
+                <h1 class="cs-title">{{ gen.name }}</h1>
+                <div class="cs-meta">
+                    <span class="cs-status">
+                        <span class="cs-status-dot"></span>
+                        {{ gen.status }}
+                    </span>
+                    <span class="cs-tag">{{ gen.category }}</span>
+                </div>
+            </div>
+            <div class="cs-quote-badge">
+                <span class="cs-quote-label">Starting From</span>
+                <span class="cs-quote-price">Call for Quote</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--               PRODUCT CONTENT                -->
+<!-- ============================================ -->
+
+<section id="product-content" data-gen-id="{{ gen.id }}">
+    <div class="cs-container">
+        <div class="cs-main-grid">
+            <div class="cs-left">
+                <div class="cs-image-card">
+                    <picture class="cs-picture">
+                        <img class="js-product-image" src="{{ gen.image }}" alt="{{ gen.name }}" loading="lazy" decoding="async" width="900" height="540">
+                    </picture>
+                </div>
+
+                <div class="cs-tabs">
+                    <input class="cs-tab-input" type="radio" name="product-tabs" id="tab-overview" checked>
+                    <input class="cs-tab-input" type="radio" name="product-tabs" id="tab-specs">
+                    <div class="cs-tab-list">
+                        <label class="cs-tab" for="tab-overview">Overview</label>
+                        <label class="cs-tab" for="tab-specs">Specifications</label>
+                    </div>
+                    <div class="cs-tab-panels">
+                        <div class="cs-tab-panel cs-tab-panel-overview">
+                            <h2 class="cs-h2">Equipment Description</h2>
+                            <p class="cs-text js-product-description">{{ gen.description }}</p>
+                            <h3 class="cs-h3">Key Features</h3>
+                            <ul class="cs-feature-list js-product-features">
+                                {% for feature in gen.keyFeatures %}
+                                <li class="cs-feature-item">
+                                    <span class="material-symbols-outlined cs-feature-icon">check_circle</span>
+                                    <span>{{ feature }}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="cs-tab-panel cs-tab-panel-specs">
+                            <h2 class="cs-h2">Technical Specifications</h2>
+                            <div class="cs-spec-grid js-product-specs">
+                                {% for label, value in gen.specs %}
+                                <div class="cs-spec-card">
+                                    <span class="material-symbols-outlined cs-spec-icon">
+                                        {% if label == "Power" %}bolt
+                                        {% elif label == "Fuel" %}local_gas_station
+                                        {% elif label == "Phase" %}settings_input_composite
+                                        {% elif label == "Voltage" %}electrical_services
+                                        {% elif label == "Engine" %}precision_manufacturing
+                                        {% elif label == "Mobility" %}local_shipping
+                                        {% elif label == "Runtime" %}schedule
+                                        {% else %}tune
+                                        {% endif %}
+                                    </span>
+                                    <div class="cs-spec-text">
+                                        <span class="cs-spec-label">{{ label }}</span>
+                                        <span class="cs-spec-value">{{ value }}</span>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="cs-right">
+                <div class="cs-form-card">
+                    <h2 class="cs-form-title">Request a Quote</h2>
+                    <p class="cs-form-subtitle">Tell us about your rental needs and we will respond with availability and pricing.</p>
+                    <form id="product-quote-form" name="Product Quote" method="post" class="cs-form">
+                        <label class="cs-form-label">
+                            Full Name
+                            <input class="cs-form-input" required type="text" name="name" placeholder="John Doe" />
+                        </label>
+                        <label class="cs-form-label">
+                            Company (Optional)
+                            <input class="cs-form-input" type="text" name="company" placeholder="Business Name LLC" />
+                        </label>
+                        <label class="cs-form-label">
+                            Email Address
+                            <input class="cs-form-input" required type="email" name="email" placeholder="john@example.com" />
+                        </label>
+                        <label class="cs-form-label">
+                            Phone Number
+                            <input class="cs-form-input" required type="tel" name="phone" placeholder="(810) 459-6302" />
+                        </label>
+                        <label class="cs-form-label">
+                            Rental Dates
+                            <input class="cs-form-input" type="text" name="dates" placeholder="MM/DD - MM/DD" />
+                        </label>
+                        <label class="cs-form-label">
+                            Project Location
+                            <input class="cs-form-input" type="text" name="location" placeholder="City, State" />
+                        </label>
+                        <label class="cs-form-label">
+                            How can we help?
+                            <textarea id="product-message" class="cs-form-textarea" required name="message" placeholder="Tell us about your power needs."></textarea>
+                        </label>
+                        <button class="cs-form-submit" type="submit">Submit Request</button>
+                    </form>
+                </div>
+
+                <div class="cs-assistance-card">
+                    <p class="cs-assistance-label">Need Immediate Assistance?</p>
+                    <p class="cs-assistance-text">Speak with a rental specialist 24/7.</p>
+                    <a class="cs-assistance-phone" href="tel:810-459-6302">(810) 459-6302</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dataUrl = '/admin/generators.json';
+        const container = document.getElementById('product-content');
+        const genId = container ? container.dataset.genId : '';
+        const messageField = document.getElementById('product-message');
+
+        function iconFor(label) {
+            switch (label) {
+                case 'Power':
+                    return 'bolt';
+                case 'Fuel':
+                    return 'local_gas_station';
+                case 'Phase':
+                    return 'settings_input_composite';
+                case 'Voltage':
+                    return 'electrical_services';
+                case 'Engine':
+                    return 'precision_manufacturing';
+                case 'Mobility':
+                    return 'local_shipping';
+                case 'Runtime':
+                    return 'schedule';
+                default:
+                    return 'tune';
+            }
+        }
+
+        function updateProduct(gen) {
+            const title = document.querySelector('#product-hero .cs-title');
+            const breadcrumb = document.querySelector('#product-hero .cs-breadcrumb-current');
+            const status = document.querySelector('#product-hero .cs-status');
+            const category = document.querySelector('#product-hero .cs-tag');
+            const image = document.querySelector('.js-product-image');
+            const description = document.querySelector('.js-product-description');
+            const features = document.querySelector('.js-product-features');
+            const specs = document.querySelector('.js-product-specs');
+
+            if (title) title.textContent = gen.name || '';
+            if (breadcrumb) breadcrumb.textContent = gen.name || '';
+            if (status) status.lastChild.textContent = ` ${gen.status || ''}`;
+            if (category) category.textContent = gen.category || '';
+            if (image) {
+                image.src = gen.image || '';
+                image.alt = gen.name || 'Generator';
+            }
+            if (description) description.textContent = gen.description || '';
+            if (features) {
+                features.innerHTML = '';
+                (gen.keyFeatures || []).forEach((feature) => {
+                    const li = document.createElement('li');
+                    li.className = 'cs-feature-item';
+                    const icon = document.createElement('span');
+                    icon.className = 'material-symbols-outlined cs-feature-icon';
+                    icon.textContent = 'check_circle';
+                    const text = document.createElement('span');
+                    text.textContent = feature;
+                    li.append(icon, text);
+                    features.appendChild(li);
+                });
+            }
+            if (specs) {
+                specs.innerHTML = '';
+                const specEntries = gen.specs || {};
+                Object.keys(specEntries).forEach((label) => {
+                    const card = document.createElement('div');
+                    card.className = 'cs-spec-card';
+                    const icon = document.createElement('span');
+                    icon.className = 'material-symbols-outlined cs-spec-icon';
+                    icon.textContent = iconFor(label);
+                    const textWrap = document.createElement('div');
+                    textWrap.className = 'cs-spec-text';
+                    const specLabel = document.createElement('span');
+                    specLabel.className = 'cs-spec-label';
+                    specLabel.textContent = label;
+                    const specValue = document.createElement('span');
+                    specValue.className = 'cs-spec-value';
+                    specValue.textContent = specEntries[label];
+                    textWrap.append(specLabel, specValue);
+                    card.append(icon, textWrap);
+                    specs.appendChild(card);
+                });
+            }
+
+            if (messageField && messageField.value.trim() === '') {
+                messageField.value = `I am interested in renting the ${gen.name}. Please provide availability and pricing.`;
+            }
+
+            if (gen.name) {
+                document.title = `${gen.name} | More Power Electric`;
+            }
+            const descriptionMeta = document.querySelector('meta[name="description"]');
+            if (descriptionMeta && gen.description) {
+                descriptionMeta.setAttribute('content', gen.description);
+            }
+        }
+
+        if (genId) {
+            fetch(dataUrl)
+                .then((response) => response.ok ? response.json() : null)
+                .then((data) => {
+                    if (!data) return;
+                    const match = data.find((item) => item.id === genId);
+                    if (match) {
+                        updateProduct(match);
+                    }
+                })
+                .catch(() => {
+                    if (messageField && messageField.value.trim() === '') {
+                        messageField.value = 'I am interested in renting this generator. Please provide availability and pricing.';
+                    }
+                });
+        } else if (messageField && messageField.value.trim() === '') {
+            messageField.value = 'I am interested in renting this generator. Please provide availability and pricing.';
+        }
+    });
+</script>
+

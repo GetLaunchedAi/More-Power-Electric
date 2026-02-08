@@ -1,0 +1,246 @@
+---
+layout: "base.html"
+description: "Browse our extensive catalog of rental generators. We offer a wide range of power solutions from 20kW to 300kW, suitable for any project or emergency."
+metaTitle: "Rental Generator Catalog | More Power Electric"
+tagTitle: "Catalog"
+preloadImg: "/images/rental_banner.png"
+preloadCSS: "/css/catalog.css"
+permalink: "/catalog/"
+eleventyNavigation:
+  key: Rental Catalog
+  order: 250
+---
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="catalog-hero">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title fx fade-in">Rental Catalog</h1>
+            <p class="cs-text fx fade-in">
+                Browse our inventory of industrial and commercial diesel generators available for rent in Troy, MI.
+            </p>
+        </div>
+        <!-- Search Bar -->
+        <div class="cs-search-container fx fade-in">
+            <div class="cs-search-wrapper">
+                <svg class="cs-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input type="text" id="generator-search" placeholder="Search generators by name or power output..." aria-label="Search generators">
+            </div>
+            <div class="cs-filter-wrapper">
+                <svg class="cs-filter-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 4.6C3 4.03995 3 3.75992 3.10899 3.54601C3.20487 3.35785 3.35785 3.20487 3.54601 3.10899C3.75992 3 4.03995 3 4.6 3H19.4C19.9601 3 20.2401 3 20.454 3.10899C20.6422 3.20487 20.7951 3.35785 20.891 3.54601C21 3.75992 21 4.03995 21 4.6V6.33726C21 6.58185 21 6.70414 20.9724 6.81923C20.9479 6.92127 20.9075 7.01881 20.8526 7.10828C20.7908 7.2092 20.7043 7.29568 20.5314 7.46863L14.4686 13.5314C14.2957 13.7043 14.2092 13.7908 14.1474 13.8917C14.0925 13.9812 14.0521 14.0787 14.0276 14.1808C14 14.2959 14 14.4182 14 14.6627V17L10 21V14.6627C10 14.4182 10 14.2959 9.97237 14.1808C9.94787 14.0787 9.90747 13.9812 9.85257 13.8917C9.79079 13.7908 9.70432 13.7043 9.53137 13.5314L3.46863 7.46863C3.29568 7.29568 3.2092 7.2092 3.14743 7.10828C3.09253 7.01881 3.05213 6.92127 3.02763 6.81923C3 6.70414 3 6.58185 3 6.33726V4.6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <select id="generator-filter">
+                    <option value="all">All Types</option>
+                    <option value="industrial">Industrial</option>
+                    <option value="commercial">Commercial</option>
+                </select>
+                <svg class="cs-chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <picture class="cs-background">
+        {% image './src/images/rental_banner.png', 'Rental Generator Catalog', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                   CATALOG                    -->
+<!-- ============================================ -->
+
+<section id="catalog">
+    <div class="cs-container">
+        <div id="no-results" style="display: none; text-align: center; padding: 3rem; width: 100%;">
+            <h3 class="cs-h3">No generators found matching your search.</h3>
+            <p>Try adjusting your search terms or filters.</p>
+        </div>
+        <div class="cs-grid" id="catalog-grid">
+            {% for gen in generators %}
+            <div class="cs-item fx slide-top staggered-m" style="--i:{{ loop.index }}" data-name="{{ gen.name | lower }}" data-power="{{ gen.power | lower }}" data-type="{{ gen.type | lower }}">
+                <picture class="cs-picture">
+                    <img src="{{ gen.image }}" alt="{{ gen.name }}" loading="lazy" decoding="async" width="400" height="240">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">{{ gen.name }}</h3>
+                    <ul class="cs-specs">
+                        <li class="cs-spec">
+                            <span class="cs-spec-label">Power Rating:</span>
+                            <span class="cs-spec-value">{{ gen.power }}</span>
+                        </li>
+                        <li class="cs-spec">
+                            <span class="cs-spec-label">Fuel Type:</span>
+                            <span class="cs-spec-value">{{ gen.fuel }}</span>
+                        </li>
+                        <li class="cs-spec">
+                            <span class="cs-spec-label">Phase:</span>
+                            <span class="cs-spec-value">{{ gen.phase }}</span>
+                        </li>
+                        <li class="cs-spec">
+                            <span class="cs-spec-label">Voltage:</span>
+                            <span class="cs-spec-value">{{ gen.voltage }}</span>
+                        </li>
+                    </ul>
+                    <div class="cs-features">
+                        {% for feature in gen.features %}
+                        <span class="cs-feature">{{ feature }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="/catalog/{{ gen.id }}/" class="button-solid cs-button-solid">View Details</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dataUrl = '/admin/generators.json';
+        const searchInput = document.getElementById('generator-search');
+        const filterSelect = document.getElementById('generator-filter');
+        const catalogGrid = document.getElementById('catalog-grid');
+        const noResults = document.getElementById('no-results');
+        let items = Array.from(catalogGrid.getElementsByClassName('cs-item'));
+
+        function createSpec(label, value) {
+            const li = document.createElement('li');
+            li.className = 'cs-spec';
+            const spanLabel = document.createElement('span');
+            spanLabel.className = 'cs-spec-label';
+            spanLabel.textContent = label;
+            const spanValue = document.createElement('span');
+            spanValue.className = 'cs-spec-value';
+            spanValue.textContent = value;
+            li.append(spanLabel, spanValue);
+            return li;
+        }
+
+        function revealItems() {
+            items.forEach((item) => item.classList.add('in'));
+        }
+
+        function renderCatalog(generators) {
+            catalogGrid.innerHTML = '';
+            generators.forEach((gen, index) => {
+                const item = document.createElement('div');
+                item.className = 'cs-item fx slide-top staggered-m';
+                item.style.setProperty('--i', index + 1);
+                item.setAttribute('data-name', (gen.name || '').toLowerCase());
+                item.setAttribute('data-power', (gen.power || '').toLowerCase());
+                item.setAttribute('data-type', (gen.type || '').toLowerCase());
+
+                const picture = document.createElement('picture');
+                picture.className = 'cs-picture';
+                const img = document.createElement('img');
+                img.src = gen.image || '';
+                img.alt = gen.name || 'Generator';
+                img.loading = 'lazy';
+                img.decoding = 'async';
+                img.width = 400;
+                img.height = 240;
+                picture.appendChild(img);
+
+                const info = document.createElement('div');
+                info.className = 'cs-info';
+                const title = document.createElement('h3');
+                title.className = 'cs-h3';
+                title.textContent = gen.name || '';
+
+                const specs = document.createElement('ul');
+                specs.className = 'cs-specs';
+                specs.appendChild(createSpec('Power Rating:', gen.power || ''));
+                specs.appendChild(createSpec('Fuel Type:', gen.fuel || ''));
+                specs.appendChild(createSpec('Phase:', gen.phase || ''));
+                specs.appendChild(createSpec('Voltage:', gen.voltage || ''));
+
+                const features = document.createElement('div');
+                features.className = 'cs-features';
+                (gen.features || []).forEach((feature) => {
+                    const span = document.createElement('span');
+                    span.className = 'cs-feature';
+                    span.textContent = feature;
+                    features.appendChild(span);
+                });
+
+                const link = document.createElement('a');
+                link.className = 'button-solid cs-button-solid';
+                link.href = '/catalog/' + gen.id + '/';
+                link.textContent = 'View Details';
+
+                info.append(title, specs, features, link);
+                item.append(picture, info);
+                catalogGrid.appendChild(item);
+            });
+
+            items = Array.from(catalogGrid.getElementsByClassName('cs-item'));
+            revealItems();
+        }
+
+        function filterGenerators() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const filterValue = filterSelect.value.toLowerCase();
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const name = item.getAttribute('data-name') || '';
+                const power = item.getAttribute('data-power') || '';
+                const type = item.getAttribute('data-type') || '';
+
+                const matchesSearch = name.includes(searchTerm) || power.includes(searchTerm);
+                const matchesFilter = filterValue === 'all' || type === filterValue;
+
+                if (matchesSearch && matchesFilter) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        revealItems();
+
+        fetch(dataUrl)
+            .then((response) => response.ok ? response.json() : null)
+            .then((data) => {
+                if (Array.isArray(data)) {
+                    renderCatalog(data);
+                    filterGenerators();
+                }
+            })
+            .catch(() => {
+                filterGenerators();
+            });
+
+        searchInput.addEventListener('input', filterGenerators);
+        filterSelect.addEventListener('change', filterGenerators);
+    });
+</script>
+
+<!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+
+<section id="cta">
+  <div class="container fx fade-in">
+    <h2 class="title">
+      Need a Custom <br />
+      Power Solution?
+    </h2>
+    <p>
+      Our experts can help you determine the exact power requirements for your project. Contact us today for a personalized recommendation and quote.
+    </p>
+    <a href="/contact/" class="button-solid">Get Expert Advice</a>
+  </div>
+  {% image './src/images/final_home_img.png', 'More Power Electric workspace', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920'%}
+</section>
+

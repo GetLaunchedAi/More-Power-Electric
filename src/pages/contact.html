@@ -26,77 +26,100 @@ eleventyNavigation:
 <!--                Contact Form                  -->
 <!-- ============================================ -->
 
-<section id="cs-contact-242">
+<section id="contact-us">
   <div class="cs-container">
-    <div class="cs-content fx slide-top staggered-m" style="--i:1">
-      <span class="cs-topper">Here to Help</span>
-      <h2 class="cs-title">Get in Touch</h2>
-      <p class="cs-text">
-        Whether you need a quick electrical repair, a full home rewiring, a panel upgrade, or expert advice on your next
-        project, More Power Electric is ready to help. Our licensed electricians provide safe, efficient, and affordable
-        solutions for both residential and commercial clients.
-      </p>
-    </div>
-    <!-- Form -->
-    <form id="cs-form-242" name="Contact Form" method="post" class="fx slide-top staggered-m" style="--i:2">
-      <label class="cs-label">
-        Name
-        <input class="cs-input" required type="text" id="name-242" name="name" placeholder="John/Jane Doe" />
-      </label>
-      <label class="cs-label">
-        Email
-        <input class="cs-input" required type="text" id="email-242" name="email" placeholder="name@company.com" />
-      </label>
-      <label class="cs-label">
-        Phone
-        <input class="cs-input" required type="text" id="phone-242" name="phone" placeholder="+1 (206) 987-6543" />
-      </label>
-      <label class="cs-label">
-        How Did You Find Us
-        <input class="cs-input" type="text" id="find-242" name="find-us"
-          placeholder="Google, Referral, Social Media..." />
-      </label>
-      <label class="cs-label cs-label-message">
-        Message
-        <textarea class="cs-input cs-textarea" required name="Message" id="message-242"
-          placeholder="Hello, I’m interested in..."></textarea>
-      </label>
-      <button class="cs-button-solid cs-submit" type="submit">
-        Submit Message
-      </button>
-    </form>
+    <div class="cs-left-side">
+      <!-- Contact Info Card -->
+      <div class="cs-info-card">
+        <h2 class="cs-card-title">CONTACT INFORMATION</h2>
+        <ul class="cs-info-list">
+          <li class="cs-info-item">
+            <div class="cs-icon-circle">
+              <span class="material-symbols-outlined cs-icon">location_on</span>
+            </div>
+            <div class="cs-info-text">
+              <span class="cs-info-label">VISIT US</span>
+              <span class="cs-info-value">401 Elmwood Drive<br>Troy, MI 48083</span>
+            </div>
+          </li>
+          <li class="cs-info-item">
+            <div class="cs-icon-circle">
+              <span class="material-symbols-outlined cs-icon">call</span>
+            </div>
+            <div class="cs-info-text">
+              <span class="cs-info-label">CALL US</span>
+              <a href="tel:810-459-6302" class="cs-info-value">(810) 459-6302</a>
+              <span class="cs-info-sub">Mon-Fri 8am-6pm</span>
+            </div>
+          </li>
+          <li class="cs-info-item">
+            <div class="cs-icon-circle">
+              <span class="material-symbols-outlined cs-icon">mail</span>
+            </div>
+            <div class="cs-info-text">
+              <span class="cs-info-label">EMAIL US</span>
+              <a href="mailto:morepowerelectricllc@gmail.com" class="cs-info-value">morepowerelectricllc@gmail.com</a>
+            </div>
+          </li>
+        </ul>
+      </div>
 
-    <!-- Contact Info -->
-    <div class="cs-right-section fx slide-top staggered-m" style="--i:3">
-      <ul class="cs-ul">
-        <li class="cs-li">
-          <picture class="cs-icon-wrapper">
-            <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/mail.svg"
-              alt="mail icon" class="cs-icon" width="36" height="36" decoding="async" />
-          </picture>
-          <div class="cs-flex-group">
-            <span class="cs-header">Email</span>
-            <a href="mailto:Morepowerelectricllc@gmail.com" class="cs-link">Morepowerelectricllc@gmail.com</a>
-          </div>
-        </li>
-        <li class="cs-li">
-          <picture class="cs-icon-wrapper">
-            <img aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/phone.svg"
-              alt="phone icon" class="cs-icon" width="36" height="36" decoding="async" />
-          </picture>
-          <div class="cs-flex-group">
-            <span class="cs-header">Phone</span>
-            Tel: <a href="tel:810-459-6302">(810) 459-6302</a>
-          </div>
-        </li>
-      </ul>
-      <!-- Picture -->
-      <picture class="cs-picture">
-        <source media="(max-width: 600px)" srcset="/images/map.PNG" />
-        <source media="(min-width: 601px)" srcset="/images/map.PNG" />
-        <img class="cs-img" aria-hidden="true" loading="lazy" decoding="async" src="/images/map.PNG"
-          alt="Map showing More Power Electric service location" width="462" height="438" />
-      </picture>
+      <!-- Hours Card -->
+      <div class="cs-hours-card">
+        <h2 class="cs-hours-title">
+          <span class="material-symbols-outlined cs-clock-icon">schedule</span>
+          HOURS
+        </h2>
+        <ul class="cs-hours-list">
+          <li class="cs-hours-item">
+            <span class="cs-day">Monday - Friday</span>
+            <span class="cs-time">7:00 AM - 6:00 PM</span>
+          </li>
+          <li class="cs-hours-item">
+            <span class="cs-day">Saturday</span>
+            <span class="cs-time">8:00 AM - 2:00 PM</span>
+          </li>
+          <li class="cs-hours-item">
+            <span class="cs-day">Sunday</span>
+            <span class="cs-time cs-closed">Closed (Emergency Only)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="cs-form-wrapper">
+      <div class="cs-form-header">
+        <h2 class="cs-form-title">REQUEST A QUOTE</h2>
+        <p class="cs-form-subtitle">Fill out the form below and our team will get back to you with availability and pricing within 24 hours.</p>
+      </div>
+      <form id="cs-form-contact" name="Contact Form" method="post" class="cs-form">
+        <div class="cs-form-row">
+          <label class="cs-form-label">
+            Full Name
+            <input class="cs-form-input" required type="text" name="name" placeholder="John Doe" />
+          </label>
+          <label class="cs-form-label">
+            Company (Optional)
+            <input class="cs-form-input" type="text" name="company" placeholder="Business Name LLC" />
+          </label>
+        </div>
+        <div class="cs-form-row">
+          <label class="cs-form-label">
+            Email Address
+            <input class="cs-form-input" required type="email" name="email" placeholder="john@example.com" />
+          </label>
+          <label class="cs-form-label">
+            Phone Number
+            <input class="cs-form-input" required type="tel" name="phone" placeholder="(810) 459-6302" />
+          </label>
+        </div>
+        <label class="cs-form-label">
+          How can we help?
+          <textarea class="cs-form-textarea" required name="Message" placeholder="I'm interested in renting a 500kW generator for 2 weeks..."></textarea>
+        </label>
+        <button class="cs-form-submit" type="submit">SUBMIT REQUEST</button>
+      </form>
     </div>
   </div>
 </section>

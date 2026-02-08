@@ -1,0 +1,15 @@
+---
+layout: "product.html"
+pagination:
+  data: generators
+  size: 1
+  alias: gen
+permalink: "/catalog/{{ gen.id }}/index.html"
+eleventyComputed:
+  description: "{{ gen.description }}"
+  metaTitle: "{{ gen.name }} Rental | More Power Electric"
+  tagTitle: "{{ gen.name }}"
+  preloadImg: "{{ gen.image }}"
+  preloadCSS: "/css/product.css"
+---
+

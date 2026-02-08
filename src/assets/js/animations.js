@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
   
     document.querySelectorAll('.reveal, .fx').forEach(el => io.observe(el));
   
-    // Observer #2: live toggle for .fx elements
+    // Observer #2: live toggle only for elements that opt-in
     const io2 = new IntersectionObserver(entries => {
       for (const { isIntersecting, target } of entries) {
         target.classList.toggle('in', isIntersecting);
       }
     }, { threshold: 0.2 });
   
-    document.querySelectorAll('.fx').forEach(el => io2.observe(el));
+    document.querySelectorAll('.fx.fx-toggle').forEach(el => io2.observe(el));
   
     // Parallax progress var
     const sec = document.querySelector('.parallax');
