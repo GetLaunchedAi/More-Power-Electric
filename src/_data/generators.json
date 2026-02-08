@@ -1,0 +1,188 @@
+[
+  {
+    "id": "gen-20kw-diesel",
+    "name": "20kW Diesel Generator",
+    "power": "20kW",
+    "fuel": "Diesel",
+    "phase": "Single / Three",
+    "voltage": "120/240V",
+    "image": "/images/generator_0.png",
+    "type": "commercial",
+    "features": ["Sound Attenuated", "Trailer Mounted", "Auto Start Ready"],
+    "description": "This 20kW diesel generator delivers dependable standby power for small job sites, events, and emergency coverage. Its compact footprint and quiet enclosure make it ideal for residential neighborhoods and light commercial work.",
+    "status": "Available Now",
+    "category": "COMMERCIAL",
+    "keyFeatures": [
+      "Whisper-quiet, sound-attenuated enclosure",
+      "Weather-resistant housing for outdoor use",
+      "Auto-start ready for transfer switch integration",
+      "Forklift pockets and tie-down points for easy transport",
+      "Simple control panel with emergency shutoff",
+      "Fuel-efficient runtime with extended service intervals"
+    ],
+    "specs": {
+      "Power": "20kW standby",
+      "Fuel": "Ultra-low sulfur diesel",
+      "Phase": "Single / Three",
+      "Voltage": "120/240V",
+      "Engine": "Kubota D1105",
+      "Mobility": "Trailer mounted",
+      "Runtime": "Up to 24 hours at 50% load"
+    }
+  },
+  {
+    "id": "gen-50kw-diesel",
+    "name": "50kW Diesel Generator",
+    "power": "50kW",
+    "fuel": "Diesel",
+    "phase": "Three Phase",
+    "voltage": "208V / 480V",
+    "image": "/images/generator_1.png",
+    "type": "commercial",
+    "features": ["Large Fuel Tank", "Quiet Operation", "Digital Controller"],
+    "description": "A versatile 50kW diesel unit built for retail sites, construction trailers, and light industrial applications. It provides steady, clean power with advanced monitoring and a quiet, weatherproof enclosure.",
+    "status": "Available Now",
+    "category": "COMMERCIAL",
+    "keyFeatures": [
+      "Large-capacity fuel tank for long runs",
+      "Digital controller with diagnostic alerts",
+      "Quiet, sound-attenuated canopy",
+      "Multi-voltage output for flexible hookups",
+      "External fuel connection for extended runtime",
+      "Low-emission Tier 4 compliant engine options"
+    ],
+    "specs": {
+      "Power": "50kW prime",
+      "Fuel": "Diesel",
+      "Phase": "Three Phase",
+      "Voltage": "208V / 480V",
+      "Engine": "Isuzu 4LE2",
+      "Mobility": "Skid base or trailer",
+      "Runtime": "Up to 30 hours at 50% load"
+    }
+  },
+  {
+    "id": "gen-100kw-diesel",
+    "name": "100kW Diesel Generator",
+    "power": "100kW",
+    "fuel": "Diesel",
+    "phase": "Three Phase",
+    "voltage": "208V / 480V",
+    "image": "/images/rental_0.png",
+    "type": "industrial",
+    "features": ["Heavy Duty", "Multi-Voltage Switch", "Remote Monitoring"],
+    "description": "Designed for critical backup and heavy-duty job sites, this 100kW generator delivers stable power with remote monitoring and multi-voltage switching. Ideal for emergency response, data rooms, and small industrial loads.",
+    "status": "Available Now",
+    "category": "EMERGENCY",
+    "keyFeatures": [
+      "Heavy-duty alternator for continuous loads",
+      "Multi-voltage selector switch",
+      "Remote monitoring and telemetry ready",
+      "Integral circuit breaker protection",
+      "Lockable control panel enclosure",
+      "Service-friendly maintenance access"
+    ],
+    "specs": {
+      "Power": "100kW standby",
+      "Fuel": "Diesel",
+      "Phase": "Three Phase",
+      "Voltage": "208V / 480V",
+      "Engine": "John Deere 4045HF",
+      "Mobility": "Trailer mounted",
+      "Runtime": "Up to 36 hours at 50% load"
+    }
+  },
+  {
+    "id": "gen-150kw-diesel",
+    "name": "150kW Diesel Generator",
+    "power": "150kW",
+    "fuel": "Diesel",
+    "phase": "Three Phase",
+    "voltage": "208V / 480V",
+    "image": "/images/rental_1.png",
+    "type": "industrial",
+    "features": ["Industrial Grade", "Paralleling Capable", "Extended Run Time"],
+    "description": "A rugged 150kW diesel generator engineered for industrial operations, event power, and redundancy. Built to parallel with additional units and support extended runtime requirements.",
+    "status": "Available Now",
+    "category": "INDUSTRIAL",
+    "keyFeatures": [
+      "Industrial-grade alternator and breaker protection",
+      "Paralleling capable for scalable power",
+      "Extended runtime fuel system",
+      "Advanced digital control with metering",
+      "Sound-attenuated enclosure for quieter operation",
+      "External load bank connection ready"
+    ],
+    "specs": {
+      "Power": "150kW prime",
+      "Fuel": "Diesel",
+      "Phase": "Three Phase",
+      "Voltage": "208V / 480V",
+      "Engine": "Cummins QSB4.5",
+      "Mobility": "Trailer mounted",
+      "Runtime": "Up to 40 hours at 50% load"
+    }
+  },
+  {
+    "id": "gen-200kw-diesel",
+    "name": "200kW Diesel Generator",
+    "power": "200kW",
+    "fuel": "Diesel",
+    "phase": "Three Phase",
+    "voltage": "208V / 480V",
+    "image": "/images/generator_0.png",
+    "type": "industrial",
+    "features": ["High Capacity", "Weatherproof Enclosure", "External Fuel Hookup"],
+    "description": "A high-capacity 200kW generator for manufacturing facilities, hospitals, and large commercial sites. Provides reliable power with robust weatherproof construction and extended fuel options.",
+    "status": "Available Now",
+    "category": "INDUSTRIAL",
+    "keyFeatures": [
+      "High-capacity alternator for demanding loads",
+      "Weatherproof, corrosion-resistant enclosure",
+      "External fuel hookup for bulk tanks",
+      "Digital controls with alarms and diagnostics",
+      "Heavy-duty skid base for stability",
+      "Quick-connect power camlocks"
+    ],
+    "specs": {
+      "Power": "200kW prime",
+      "Fuel": "Diesel",
+      "Phase": "Three Phase",
+      "Voltage": "208V / 480V",
+      "Engine": "Doosan P086TI",
+      "Mobility": "Skid base or trailer",
+      "Runtime": "Up to 44 hours at 50% load"
+    }
+  },
+  {
+    "id": "gen-300kw-diesel",
+    "name": "300kW Diesel Generator",
+    "power": "300kW",
+    "fuel": "Diesel",
+    "phase": "Three Phase",
+    "voltage": "208V / 480V",
+    "image": "/images/generator_1.png",
+    "type": "industrial",
+    "features": ["Prime Power Rated", "Advanced Controls", "Spill Containment"],
+    "description": "Our 300kW diesel generator delivers prime-rated power for large-scale projects, critical infrastructure, and backup redundancy. Built with advanced controls, spill containment, and reliable long-duration performance.",
+    "status": "Available Now",
+    "category": "INDUSTRIAL",
+    "keyFeatures": [
+      "Prime power rating for continuous duty",
+      "Advanced controller with load management",
+      "Integrated spill containment base",
+      "High-efficiency cooling system",
+      "Remote monitoring and telemetry ready",
+      "Multi-unit paralleling compatibility"
+    ],
+    "specs": {
+      "Power": "300kW prime",
+      "Fuel": "Diesel",
+      "Phase": "Three Phase",
+      "Voltage": "208V / 480V",
+      "Engine": "MTU 6R1000",
+      "Mobility": "Trailer mounted",
+      "Runtime": "Up to 48 hours at 50% load"
+    }
+  }
+]
