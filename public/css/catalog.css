@@ -1,0 +1,552 @@
+/*-- -------------------------- -->
+<---          Catalog           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+    #catalog-hero {
+        padding: clamp(8rem, 15vw, 10rem) 1rem clamp(4rem, 8vw, 6rem);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #catalog-hero .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    #catalog-hero .cs-content {
+        max-width: 40rem;
+        margin-bottom: clamp(2rem, 5vw, 3rem);
+    }
+
+    #catalog-hero .cs-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-weight: 900;
+        line-height: 1.1em;
+        margin: 0 0 1rem 0;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    #catalog-hero .cs-text {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.5em;
+        color: #fff;
+        margin: 0;
+        opacity: 0.9;
+    }
+
+    #catalog-hero .cs-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    #catalog-hero .cs-background:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 74, 173, 0.8) 0%, rgba(0, 74, 173, 0.6) 100%);
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    #catalog-hero .cs-background img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Search Bar */
+    #catalog-hero .cs-search-container {
+        width: 100%;
+        max-width: 50rem;
+        background: #fff;
+        padding: 0.75rem;
+        border-radius: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        box-shadow: 0px 24px 48px rgba(0, 0, 0, 0.15);
+        position: absolute;
+        bottom: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 20;
+    }
+
+    /* Tablet - 768px */
+    @media only screen and (min-width: 48em) {
+        #catalog-hero .cs-search-container {
+            flex-direction: row;
+            padding: 0.5rem;
+            bottom: -2rem;
+        }
+
+        #catalog-hero .cs-filter-wrapper {
+            border-left: 1px solid #e2e8f0;
+            padding-left: 0.5rem;
+        }
+    }
+
+    #catalog-hero .cs-search-wrapper {
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    #catalog-hero .cs-search-icon {
+        position: absolute;
+        left: 1rem;
+        color: #94a3b8;
+        pointer-events: none;
+    }
+
+    #catalog-hero #generator-search {
+        width: 100%;
+        padding: 0.875rem 1rem 0.875rem 3rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+        font-family: inherit;
+        font-size: 1rem;
+        background-color: #f8fafc;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    #catalog-hero #generator-search:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1);
+        background-color: #fff;
+    }
+
+    #catalog-hero .cs-filter-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-width: 10rem;
+    }
+
+    #catalog-hero .cs-filter-icon {
+        position: absolute;
+        left: 1rem;
+        color: #64748b;
+        pointer-events: none;
+    }
+
+    #catalog-hero #generator-filter {
+        width: 100%;
+        padding: 0.875rem 2.5rem 0.875rem 2.75rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+        font-family: inherit;
+        font-size: 1rem;
+        background-color: #f8fafc;
+        appearance: none;
+        cursor: pointer;
+        color: #1e293b;
+    }
+
+    #catalog-hero .cs-chevron-icon {
+        position: absolute;
+        right: 1rem;
+        color: #64748b;
+        pointer-events: none;
+    }
+
+    #catalog {
+        padding: clamp(6rem, 10vw, 8rem) 1rem clamp(3rem, 6vw, 4rem);
+        background-color: #f7f9fc;
+    }
+
+    #catalog .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(2rem, 4vw, 3rem);
+    }
+
+    #catalog .cs-content {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #catalog .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        position: relative;
+        text-transform: uppercase;
+    }
+
+    #catalog .cs-title:after {
+        content: "";
+        width: 4rem;
+        height: 4px;
+        background: var(--primary);
+        display: block;
+        margin: 0.5rem auto 0;
+    }
+
+    #catalog .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+
+    #catalog .cs-grid {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+    }
+
+    #catalog .cs-item {
+        list-style: none;
+        grid-column: span 12;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 1rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e8e9ec;
+        position: relative;
+        z-index: 1;
+        max-width: 31.25rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #catalog .cs-item:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    #catalog .cs-picture {
+        width: 100%;
+        height: 15rem;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        background-color: #f0f4f8;
+    }
+
+    #catalog .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.5s;
+        padding: 1rem;
+    }
+
+    #catalog .cs-item:hover .cs-picture img {
+        transform: scale(1.05);
+    }
+
+    #catalog .cs-info {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        border-top: 1px solid #e8e9ec;
+    }
+
+    #catalog .cs-h3 {
+        font-size: 1.25rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        text-transform: uppercase;
+    }
+
+    #catalog .cs-specs {
+        margin: 0 0 1.5rem 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #catalog .cs-spec {
+        font-size: 0.9rem;
+        line-height: 1.5em;
+        color: var(--bodyTextColor);
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 0.25rem;
+    }
+
+    #catalog .cs-spec-label {
+        font-weight: 700;
+        color: var(--headerColor);
+    }
+
+    #catalog .cs-features {
+        margin: 0 0 1.5rem 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    #catalog .cs-feature {
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.25rem 0.75rem;
+        background-color: #f0f4f8;
+        color: var(--primaryDark);
+        border-radius: 2rem;
+        text-transform: uppercase;
+    }
+
+    #catalog .cs-button-solid {
+        margin-top: auto;
+        width: 100%;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+    #catalog .cs-item {
+        grid-column: span 6;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64em) {
+    #catalog .cs-item {
+        grid-column: span 4;
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+    body.dark-mode #catalog {
+        background-color: var(--dark);
+    }
+
+    body.dark-mode #catalog .cs-title,
+    body.dark-mode #catalog .cs-text,
+    body.dark-mode #catalog .cs-h3,
+    body.dark-mode #catalog .cs-spec {
+        color: var(--bodyTextColorWhite);
+    }
+
+    body.dark-mode #catalog .cs-spec-label {
+        color: var(--primaryShade);
+    }
+
+    body.dark-mode #catalog .cs-item {
+        background-color: var(--medium);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode #catalog .cs-info {
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode #catalog .cs-picture {
+        background-color: var(--accent);
+    }
+
+    body.dark-mode #catalog .cs-feature {
+        background-color: rgba(255, 255, 255, 0.08);
+        color: var(--primaryShade);
+    }
+
+    body.dark-mode #catalog .cs-spec {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body.dark-mode #catalog-hero #generator-search,
+    body.dark-mode #catalog-hero #generator-filter {
+        background-color: var(--accent);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
+    body.dark-mode #catalog-hero .cs-search-container {
+        background-color: var(--medium);
+    }
+
+    body.dark-mode #catalog-hero .cs-search-icon,
+    body.dark-mode #catalog-hero .cs-filter-icon,
+    body.dark-mode #catalog-hero .cs-chevron-icon {
+        color: #94a3b8;
+    }
+}
+
+/*-- -------------------------- -->
+<---    Final Call To Action    -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0em) {
+    #cta {
+        position: relative;
+        padding: 3.125rem 0;
+    }
+    #cta:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    #cta .container {
+        text-align: center;
+    }
+    #cta picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+    }
+    #cta picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    #cta .title {
+        font-weight: 900;
+        font-size: min(9vw, 3rem);
+        line-height: 1.20833333;
+        color: #fff;
+        position: relative;
+        margin-bottom: 2.25rem;
+        text-align: center;
+    }
+    #cta p {
+        color: #fff;
+        text-align: center;
+        opacity: 1;
+        margin: auto;
+        margin-bottom: 2.25rem;
+        width: 96%;
+        max-width: 37.375rem;
+    }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+    #cta {
+        padding: 10.5rem 0;
+    }
+}
+
+/* Large Desktop */
+@media only screen and (min-width: 1300px) {
+    #cta {
+        position: relative;
+        margin-top: 6.25rem;
+    }
+    #cta:before {
+        display: none;
+    }
+    #cta:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 69.25rem;
+        width: 125rem;
+        background: url("/assets/svgs/cta-squares.svg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 1;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -3;
+    }
+    #cta .container {
+        width: 90.0625%;
+        margin: auto;
+    }
+    #cta picture {
+        width: 90.0625%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #cta picture:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+    body.dark-mode #cta:after {
+        display: none;
+    }
+}
+

@@ -1,0 +1,512 @@
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-us {
+    padding: var(--sectionPadding);
+    background-color: #f7f9fb;
+  }
+
+  #contact-us .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 40px - 80px */
+    gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  #contact-us .cs-left-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* 24px - 32px */
+    gap: clamp(1.5rem, 4vw, 2rem);
+    max-width: 31.25rem;
+  }
+
+  /* Info Card */
+  #contact-us .cs-info-card {
+    background-color: #fff;
+    /* 24px - 40px */
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8eef3;
+  }
+
+  #contact-us .cs-card-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: var(--headerColor);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  #contact-us .cs-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #contact-us .cs-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  #contact-us .cs-icon-circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #eef4ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+
+  #contact-us .cs-info-item:hover .cs-icon-circle {
+    transform: scale(1.1);
+  }
+
+  #contact-us .cs-icon {
+    font-size: 1.5rem;
+    color: #2563eb;
+    /* Removed filter as we are using font color now */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contact-us .cs-info-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact-us .cs-info-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #7d8da1;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+  }
+
+  #contact-us .cs-info-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--headerColor);
+    line-height: 1.4em;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  #contact-us a.cs-info-value:hover {
+    color: var(--primary);
+  }
+
+  #contact-us .cs-info-sub {
+    font-size: 0.875rem;
+    color: #7d8da1;
+    margin-top: 0.25rem;
+  }
+
+  /* Hours Card */
+  #contact-us .cs-hours-card {
+    background-color: #121926;
+    /* 24px - 40px */
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    border-radius: 1rem;
+    color: #fff;
+  }
+
+  #contact-us .cs-hours-title {
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  #contact-us .cs-clock-icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+
+  #contact-us .cs-hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  #contact-us .cs-hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #contact-us .cs-hours-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  #contact-us .cs-day {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  #contact-us .cs-time {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  #contact-us .cs-closed {
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  /* Form Wrapper */
+  #contact-us .cs-form-wrapper {
+    width: 100%;
+    background-color: #fff;
+    /* 24px - 56px */
+    padding: clamp(1.5rem, 6vw, 3.5rem);
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8eef3;
+    box-sizing: border-box;
+  }
+
+  #contact-us .cs-form-header {
+    margin-bottom: 2.5rem;
+  }
+
+  #contact-us .cs-form-title {
+    /* 24px - 32px */
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 900;
+    color: var(--headerColor);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  #contact-us .cs-form-subtitle {
+    font-size: 1.125rem;
+    color: #7d8da1;
+    line-height: 1.5em;
+  }
+
+  #contact-us .cs-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  #contact-us .cs-form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  #contact-us .cs-form-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--headerColor);
+  }
+
+  #contact-us .cs-form-input,
+  #contact-us .cs-form-textarea {
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e8eef3;
+    background-color: #f7f9fb;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--headerColor);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+  }
+
+  #contact-us .cs-form-input::placeholder,
+  #contact-us .cs-form-textarea::placeholder {
+    color: #b0bac9;
+  }
+
+  #contact-us .cs-form-input:focus,
+  #contact-us .cs-form-textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 153, 0, 0.1);
+  }
+
+  #contact-us .cs-form-textarea {
+    min-height: 10rem;
+    resize: vertical;
+  }
+
+  #contact-us .cs-form-submit {
+    width: 100%;
+    padding: 1.25rem;
+    background-color: var(--primary);
+    color: #000;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
+  }
+
+  #contact-us .cs-form-submit:hover {
+    background-color: var(--primaryDark);
+  }
+
+  #contact-us .cs-form-submit:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #contact-us .cs-form-row {
+    flex-direction: row;
+  }
+
+  #contact-us .cs-form-row .cs-form-label {
+    width: 50%;
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-us .cs-container {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  #contact-us .cs-left-side {
+    width: 30%;
+    max-width: 25rem;
+  }
+
+  #contact-us .cs-form-wrapper {
+    width: 65%;
+    max-width: 55rem;
+  }
+}
+
+/* Dark Mode */
+body.dark-mode #contact-us {
+  background-color: #0b0f19;
+}
+
+body.dark-mode #contact-us .cs-info-card,
+body.dark-mode #contact-us .cs-form-wrapper {
+  background-color: #121926;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+body.dark-mode #contact-us .cs-card-title,
+body.dark-mode #contact-us .cs-info-value,
+body.dark-mode #contact-us .cs-form-title,
+body.dark-mode #contact-us .cs-form-label,
+body.dark-mode #contact-us .cs-form-input,
+body.dark-mode #contact-us .cs-form-textarea {
+  color: #fff;
+}
+
+body.dark-mode #contact-us .cs-info-label,
+body.dark-mode #contact-us .cs-info-sub,
+body.dark-mode #contact-us .cs-form-subtitle {
+  color: #94a3b8;
+}
+
+body.dark-mode #contact-us .cs-icon-circle {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode #contact-us .cs-icon {
+  color: var(--primary);
+}
+
+body.dark-mode #contact-us .cs-form-input,
+body.dark-mode #contact-us .cs-form-textarea {
+  background-color: #0b0f19;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #contact-us .cs-form-input:focus,
+body.dark-mode #contact-us .cs-form-textarea:focus {
+  border-color: var(--primary);
+}
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0em) {
+  #reviews {
+    /* Centers the button */
+    text-align: center;
+    padding: var(--sectionPadding);
+  }
+  #reviews .cs-container {
+    width: 100%;
+    max-width: 69rem;
+    margin: auto;
+  }
+  #reviews .cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  #reviews .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: center;
+    max-width: 43.75rem;
+    margin: 0 auto 1rem;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #reviews .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0 auto;
+    /* 88px - 104px */
+    margin-bottom: clamp(5.5em, 10.2vw, 6.5em);
+    color: var(--bodyTextColor);
+  }
+  #reviews .cs-card-group {
+    padding: 0;
+    /* 48px - 64px */
+    margin: 0 auto clamp(3rem, 5vw, 4rem);
+  }
+  #reviews .cs-item {
+    text-align: left;
+    list-style: none;
+    width: 100%;
+    max-width: 33.875rem;
+    margin: 0 auto 4rem;
+    /* Padding L & R - 16px - 32px */
+    padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0;
+    /* 32px - 40px */
+    padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
+    box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 0.25rem;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Prevents padding from affecting height & width */
+    box-sizing: border-box;
+  }
+  #reviews .cs-item:last-of-type {
+    margin-bottom: 0;
+  }
+  #reviews .cs-item-img {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: -2.5rem;
+  }
+  #reviews .cs-item-p {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0 0 1.25rem;
+    padding-bottom: 1.25rem;
+    color: var(--bodyTextColor);
+    border-bottom: 1px solid #e8e9ec;
+  }
+  body.dark-mode #reviews .cs-item-p {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  #reviews .cs-reviewer {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    width: 40%;
+    margin: 0 auto 0 0;
+    display: block;
+    color: var(--headerColor);
+  }
+  #reviews .cs-desc {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--label);
+    display: block;
+  }
+  #reviews .cs-item-stars {
+    width: 6rem;
+    height: 1rem;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  #reviews .cs-card-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  #reviews .cs-item {
+    /* reset margin so it won't interfere with flexbox */
+    margin: 0;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0em) {
+  body.dark-mode #reviews .cs-title,
+  body.dark-mode #reviews .cs-text,
+  body.dark-mode #reviews .cs-item-p,
+  body.dark-mode #reviews .cs-reviewer {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #reviews .cs-item {
+    background: var(--medium);
+  }
+  body.dark-mode #reviews .cs-desc {
+    color: var(--primaryLight);
+  }
+}
